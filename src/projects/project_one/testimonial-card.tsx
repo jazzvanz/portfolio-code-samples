@@ -22,8 +22,6 @@ const TestimonialCard: React.FC = () => {
 export default TestimonialCard;
 
 // TODO
-// - default CSS / Reformat
-// add to app file / start gallery? 
 // html
 // content - set up mock file
 // setup type file
@@ -35,3 +33,6 @@ export default TestimonialCard;
 // add test for truncating 
 // run through instructions 
 // host for review? 
+
+// Look into [vite] server connection lost. Polling for restart...
+// client:921 WebSocket connection to 'ws://localhost:5173/' failed: 
