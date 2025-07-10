@@ -1,28 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
-// <!-- Sarah Dole
-// @sarahdole
-// I've been searching for high-quality abstract images for my design projects, 
-// and I'm thrilled to have found this platform. The variety and depth of creativity are astounding! 
-// -->
 
-const Title = styled.h2`
+const Card = styled.div`
   margin-top: 0;
   text-align: center;
 `;
 
+const Name = styled.h3`
+  margin-top: 0;
+  text-align: center;
+`;
+
+const Handle = styled.h4`
+  margin-top: 0;
+  text-align: center;
+`;
+
+const Blurb = styled.p`
+  margin-top: 0;
+  text-align: center;
+`;
+
+const UserImage = styled.img`
+      margin-top: 0;
+      text-align: center;
+`;
+
 const TestimonialCard: React.FC = () => {
     return (
-        <>
-            <Title>test</Title>
-        </>
+        <Card>
+            <div>
+                <UserImage />
+                <div>
+                    <Name>Sarah Dole</Name>
+                    <Handle>@sarahdole</Handle>
+                </div>
+            </div>
+            <Blurb>I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!</Blurb>
+        </Card>
     )
 };
 
 export default TestimonialCard;
 
 // TODO
-// html
 // content - set up mock file
 // setup type file
 // setup theme file - look to design system 
