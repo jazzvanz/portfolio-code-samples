@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import testimonial from '../types/types';
 
 const Card = styled.div`
   margin-top: 0;
@@ -26,17 +27,17 @@ const UserImage = styled.img`
       text-align: center;
 `;
 
-const TestimonialCard: React.FC = () => {
+const TestimonialCard: React.FC = ({ name, handle, testimonial, UserImage }: testimonial) => {
     return (
         <Card>
             <div>
                 <UserImage />
                 <div>
-                    <Name>Sarah Dole</Name>
-                    <Handle>@sarahdole</Handle>
+                    <Name>{name}</Name>
+                    <Handle>{handle}</Handle>
                 </div>
             </div>
-            <Blurb>I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!</Blurb>
+            <Blurb>{testimonial}</Blurb>
         </Card>
     )
 };
@@ -44,10 +45,10 @@ const TestimonialCard: React.FC = () => {
 export default TestimonialCard;
 
 // TODO
-// content - set up mock file
-// setup type file
-// setup theme file - look to design system 
+// style testimonial card
+// add user image
 // acheive layout
+// setup theme file - look to design system 
 // responsive 
 // check other broswers
 // truncate utlity function 

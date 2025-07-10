@@ -1,6 +1,7 @@
 import './App.css'
 import styled from 'styled-components';
 import { TestimonialCard } from './projects/index';
+import { testimonial } from './mocks/mocks';
 
 const Gallery = styled.section`
   background-color: #00100B;
@@ -20,7 +21,7 @@ function App() {
   return (
     <Gallery>
       <GalleryItem>
-        <TestimonialCard />
+        <TestimonialCard testimonial={testimonial} />
       </GalleryItem>
       <GalleryItem>
         Second Item
