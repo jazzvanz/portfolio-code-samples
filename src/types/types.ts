@@ -7,3 +7,5 @@ export interface Testimonial {
         alt: string;
     };
 };
+
+export type Devices = { [key: string]: string };

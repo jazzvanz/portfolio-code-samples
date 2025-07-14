@@ -5,28 +5,29 @@ export interface TestimonialProps {
 }
 
 const Card = styled.div`
-  margin-top: 0;
-  text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 0.25rem 1rem 0;
+    width: 100%;
 `;
 
 const Name = styled.h3`
-  margin-top: 0;
-  text-align: center;
+  margin: 0;
 `;
 
 const Handle = styled.h4`
-  margin-top: 0;
-  text-align: center;
+  margin: 0;
 `;
 
 const Blurb = styled.p`
-  margin-top: 0;
-  text-align: center;
+  margin: 0;
 `;
 
 const Image = styled.img`
-      margin-top: 0;
-      text-align: center;
+  display: block;
+  width: 3rem;
+  height: 3rem;
 `;
 
 const TestimonialCard = ({ testimonial }: TestimonialProps) => {
@@ -34,14 +35,14 @@ const TestimonialCard = ({ testimonial }: TestimonialProps) => {
     console.log('TestimonialCard props:', { name, handle, blurb, userImageFile: userImage.file })
     return (
         <Card>
-            <div>
-                <Image src={userImage.file} alt={userImage.alt} />
-                <div>
-                    <Name>{name}</Name>
-                    <Handle>{handle}</Handle>
-                </div>
-            </div>
-            <Blurb>{blurb}</Blurb>
+          <div style={{ display: 'flex', paddingBottom: '16px'}}>
+              <Image src={userImage.file} alt={userImage.alt} />
+              <div style={{ paddingLeft: '16px'}}>
+                  <Name>{name}</Name>
+                  <Handle>{handle}</Handle>
+              </div>
+          </div>
+          <Blurb>{blurb}</Blurb>
         </Card>
     )
 };
@@ -50,12 +51,11 @@ export default TestimonialCard;
 
 // TODO
 // style testimonial card
-// acheive layout
 // setup theme file - look to design system 
 // responsive 
 // check other broswers
-// truncate utlity function 
 // add test for truncating 
+// error boundary for testimonial card or app
 // run through instructions 
 // host for review? 
 
