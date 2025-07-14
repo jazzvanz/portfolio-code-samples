@@ -1,7 +1,7 @@
-export type Testimonial = {
+export interface Testimonial {
     name: string;
     handle: string;
-    testimonial: string;
+    blurb: string;
     userImage: {
         file: string;
         alt: string;

@@ -1,6 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-import testimonial from '../types/types';
+import { type Testimonial } from '../../types/types';
+export interface TestimonialProps {
+  testimonial: Testimonial;
+}
 
 const Card = styled.div`
   margin-top: 0;
@@ -22,22 +24,24 @@ const Blurb = styled.p`
   text-align: center;
 `;
 
-const UserImage = styled.img`
+const Image = styled.img`
       margin-top: 0;
       text-align: center;
 `;
 
-const TestimonialCard: React.FC = ({ name, handle, testimonial, UserImage }: testimonial) => {
+const TestimonialCard = ({ testimonial }: TestimonialProps) => {
+    const { name, handle, blurb, userImage } = testimonial;
+    console.log('TestimonialCard props:', { name, handle, blurb, userImageFile: userImage.file })
     return (
         <Card>
             <div>
-                <UserImage />
+                <Image src={userImage.file} alt={userImage.alt} />
                 <div>
                     <Name>{name}</Name>
                     <Handle>{handle}</Handle>
                 </div>
             </div>
-            <Blurb>{testimonial}</Blurb>
+            <Blurb>{blurb}</Blurb>
         </Card>
     )
 };
@@ -46,7 +50,6 @@ export default TestimonialCard;
 
 // TODO
 // style testimonial card
-// add user image
 // acheive layout
 // setup theme file - look to design system 
 // responsive 
