@@ -1,11 +1,16 @@
-# React + TypeScript + Vite
+# HTML
+- Challenge 1: Testimonial Card
+Build a simple user testimonial card with key testimonial elements.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# TODO's for Supporting Build:
+- Tests for Debounce and Throttle 
+- Design System / Vars
+- Look into [vite] server connection lost. Polling for restart...
+WebSocket connection failed: 
+
+# React + TypeScript + Vite + Vitest + Styled Components
 
 ## Expanding the ESLint configuration
 

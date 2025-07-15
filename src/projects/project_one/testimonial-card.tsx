@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { type Testimonial } from '../../types/types';
+import { truncateText } from '../../utlity/truncate';
+
 export interface TestimonialProps {
   testimonial: Testimonial;
 }
@@ -7,21 +9,30 @@ export interface TestimonialProps {
 const Card = styled.div`
     background-color: #FFFFFF;
     border-radius: 0.5rem;
-    padding: 2.5rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0 0.25rem 1rem 0;
+    padding: 1.5rem;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10);
+    max-width: 21.25rem;
     width: 100%;
 `;
 
 const Name = styled.h3`
   margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
 `;
 
 const Handle = styled.h4`
   margin: 0;
+  font-size: 0.875rem; 
+  font-weight: 400;
+  color: #525252;
 `;
 
 const Blurb = styled.p`
+  font-family: "Noto Sans";
+  font-size: 1rem;
   margin: 0;
+  color: #525252;
 `;
 
 const Image = styled.img`
@@ -32,32 +43,19 @@ const Image = styled.img`
 
 const TestimonialCard = ({ testimonial }: TestimonialProps) => {
     const { name, handle, blurb, userImage } = testimonial;
-    console.log('TestimonialCard props:', { name, handle, blurb, userImageFile: userImage.file })
+
     return (
         <Card>
-          <div style={{ display: 'flex', paddingBottom: '16px'}}>
-              <Image src={userImage.file} alt={userImage.alt} />
-              <div style={{ paddingLeft: '16px'}}>
+          <div style={{ display: 'flex', paddingBottom: '1rem'}}>
+              <Image src={userImage.file} alt={userImage.alt} loading="lazy" />
+              <div style={{ paddingLeft: '1rem'}}>
                   <Name>{name}</Name>
                   <Handle>{handle}</Handle>
               </div>
           </div>
-          <Blurb>{blurb}</Blurb>
+          <Blurb>{truncateText(blurb, 175)}</Blurb>
         </Card>
     )
 };
 
 export default TestimonialCard;
-
-// TODO
-// style testimonial card
-// setup theme file - look to design system 
-// responsive 
-// check other broswers
-// add test for truncating 
-// error boundary for testimonial card or app
-// run through instructions 
-// host for review? 
-
-// Look into [vite] server connection lost. Polling for restart...
-// client:921 WebSocket connection to 'ws://localhost:5173/' failed: 
