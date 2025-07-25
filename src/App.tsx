@@ -12,21 +12,20 @@ const Gallery = styled.section`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.25rem;
+  align-content: center;
   justify-items: center;
   align-items: center;
   padding: 1.25rem;
 
-  @media only screen and ${devices.lg} {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  // @media only screen and ${devices.lg} {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 `;
 
 function App() {
 
   return (
     <Gallery>
-      <TestimonialCard testimonial={testimonial} />
-      <TestimonialCard testimonial={testimonial} />
       <TestimonialCard testimonial={testimonial} />
     </Gallery>
   )

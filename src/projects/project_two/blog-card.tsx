@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { type Testimonial } from '../../types/types';
-import { truncateText } from '../../utlity/truncate';
+import { type Blog } from '../../types/types';
 
-export interface TestimonialProps {
-  testimonial: Testimonial;
+export interface BlogProps {
+  blog: Blog;
 }
 
 const Card = styled.div`
@@ -21,28 +20,8 @@ const Name = styled.h3`
   font-weight: 600;
 `;
 
-const Handle = styled.h4`
-  margin: 0;
-  font-size: 0.875rem; 
-  font-weight: 400;
-  color: #525252;
-`;
-
-const Blurb = styled.p`
-  font-family: "Noto Sans";
-  font-size: 1rem;
-  margin: 0;
-  color: #525252;
-`;
-
-const Image = styled.img`
-  display: block;
-  width: 3rem;
-  height: 3rem;
-`;
-
-const TestimonialCard = ({ testimonial }: TestimonialProps) => {
-    const { name, handle, blurb, userImage } = testimonial;
+const BlogCard = ({ blog }: BlogProps) => {
+    // const { name, handle, blurb, userImage } = testimonial;
 
     return (
         <Card>
@@ -58,4 +37,4 @@ const TestimonialCard = ({ testimonial }: TestimonialProps) => {
     )
 };
 
-export default TestimonialCard;
+export default BlogCard;

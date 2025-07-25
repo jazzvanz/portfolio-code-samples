@@ -2,9 +2,16 @@
 - Challenge 1: Testimonial Card
 Build a simple user testimonial card with key testimonial elements.
 
+- Challenge 2: Blog Card
+Build a simple user testimonial card with key testimonial elements.
+
 
 
 # TODO's for Supporting Build:
+- Routes for each Component 
+- Make reuseable Blog Card for both Components 
+- Setup Style Guide Variables. 
+
 - Tests for Debounce and Throttle 
 - Design System / Vars
 - Look into [vite] server connection lost. Polling for restart...
