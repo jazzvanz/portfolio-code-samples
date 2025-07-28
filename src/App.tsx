@@ -1,33 +1,22 @@
 import './App.css'
-import styled from 'styled-components';
-import { TestimonialCard } from './projects/index';
+import { Routes, Route } from 'react-router';
+import Layout from './routes/layout.tsx'
+import { TestimonialCard, BlogCard } from './projects/index';
 import { testimonial } from './mocks/mocks';
-import { devices } from './constants/constants.js';
-
-const Gallery = styled.section`
-  background: linear-gradient(148deg, #F9FAFB 8.89%, #D2D6DB 100.48%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  min-height: 100vh;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.25rem;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  padding: 1.25rem;
-
-  // @media only screen and ${devices.lg} {
-  //   grid-template-columns: repeat(3, 1fr);
-  // }
-`;
+import ComponentsPage from './pages/components-page.tsx';
 
 function App() {
 
   return (
-    <Gallery>
-      <TestimonialCard testimonial={testimonial} />
-    </Gallery>
+    <main>
+      <Routes>
+        <Route element={<Layout />}>
+        <Route path="/portfolio-code-samples/components" element={<ComponentsPage />} />
+          <Route path="/portfolio-code-samples/components/testimonial-card" element={<TestimonialCard testimonial={testimonial} />} />
+          {/* <Route path="blog-card" element={<BlogCard blog={} />} /> */}
+        </Route>
+      </Routes>
+    </main>
   )
 }
 
