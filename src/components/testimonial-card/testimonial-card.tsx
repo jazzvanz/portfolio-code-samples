@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import { type Testimonial } from '../../types/types';
 import { truncateText } from '../../utlity/truncate';
+import { tokens } from '../../constants/tokens';
 
 export interface TestimonialProps {
   testimonial: Testimonial;
 }
 
 const Card = styled.div`
-    background-color: #FFFFFF;
+    background-color: ${tokens.colors.white};
     border-radius: 0.5rem;
-    padding: 1.5rem;
+    padding: ${tokens.spacing.large};
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10);
     max-width: 21.25rem;
     width: 100%;
@@ -17,7 +18,7 @@ const Card = styled.div`
 
 const Name = styled.h3`
   margin: 0;
-  font-size: 1.125rem;
+  ${tokens.typography.large}
   font-weight: 600;
 `;
 
@@ -25,14 +26,14 @@ const Handle = styled.h4`
   margin: 0;
   font-size: 0.875rem; 
   font-weight: 400;
-  color: #525252;
+  color: ${tokens.colors.grey.dark};
 `;
 
 const Blurb = styled.p`
-  font-family: "Noto Sans";
-  font-size: 1rem;
   margin: 0;
-  color: #525252;
+  font-family: "Noto Sans";
+  ${tokens.typography.base}
+  color: ${tokens.colors.grey.dark};
 `;
 
 const Image = styled.img`

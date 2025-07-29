@@ -1,7 +1,7 @@
 import './App.css'
 import { Routes, Route } from 'react-router';
 import Layout from './routes/layout.tsx'
-import { TestimonialCard, BlogCard } from './projects/index';
+import { TestimonialCard, BlogCard } from './components/index';
 import { testimonial } from './mocks/mocks';
 import ComponentsPage from './pages/components-page.tsx';
 
