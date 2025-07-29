@@ -16,6 +16,8 @@ export const tokens = {
     whiteToGrey: 'linear-gradient(148deg, #F9FAFB 8.89%, #D2D6DB 100.48%)'
   },
   spacing: {
+    xsmall: '0.25rem', // 4px
+    small: '0.5rem', // 8px
     medium: '1rem', // 16px
     large: '1.5rem' // 24px
   },

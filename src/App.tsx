@@ -2,7 +2,7 @@ import './App.css'
 import { Routes, Route } from 'react-router';
 import Layout from './routes/layout.tsx'
 import { TestimonialCard, BlogCard } from './components/index';
-import { testimonial } from './mocks/mocks';
+import { testimonial, blog } from './mocks/mocks';
 import ComponentsPage from './pages/components-page.tsx';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Route element={<Layout />}>
         <Route path="/portfolio-code-samples/components" element={<ComponentsPage />} />
           <Route path="/portfolio-code-samples/components/testimonial-card" element={<TestimonialCard testimonial={testimonial} />} />
-          {/* <Route path="blog-card" element={<BlogCard blog={} />} /> */}
+          <Route path="/portfolio-code-samples/components/blog-card" element={<BlogCard blog={blog} />} />
         </Route>
       </Routes>
     </main>

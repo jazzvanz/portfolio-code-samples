@@ -8,4 +8,14 @@ export interface Testimonial {
     };
 };
 
+export interface Blog {
+    title: string;
+    tags: string[],
+    byline: string,
+    blogImage: {
+        file: string,
+        alt: string,
+    }
+} 
+
 export type Devices = { [key: string]: string };
