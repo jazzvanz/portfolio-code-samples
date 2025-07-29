@@ -8,9 +8,9 @@ Build a simple user testimonial card with key testimonial elements.
 
 
 # TODO's for Supporting Build:
-- Routes for each Component 
 - Make reuseable Blog Card for both Components 
 - Setup Style Guide Variables. 
+- https://www.robinwieruch.de/react-router/ - left off at active links. very good tut. 
 
 - Tests for Debounce and Throttle 
 - Design System / Vars
